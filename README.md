@@ -68,8 +68,8 @@ python scripts/01_load_data.py
 
 ```bash
 mongosh "ВАШ_URI" --file scripts/02_transform.js
-mongosh "ВАШ_URI" --file scripts/part2_queries.js > scripts/part2_queries.out.txt
-mongosh "ВАШ_URI" --file scripts/part3_indexes.js > scripts/part3_indexes.out.txt
+mongosh "ВАШ_URI" --file queries/part2_queries.js > queries/part2_queries.out.txt
+mongosh "ВАШ_URI" --file queries/part3_indexes.js > queries/part3_indexes.out.txt
 ```
 
 `part3_indexes.js` є самодостатнім експериментом: на початку він видаляє всі користувацькі індекси, фіксує baseline, перевіряє candidate-індекси, видаляє їх, створює фінальні індекси та повторює `explain("executionStats")`.
